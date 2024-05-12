@@ -3,24 +3,22 @@ name: CI
 on:
   push:
     branches:
-      - KAN-1-feature-ms-GiovanniBahamondes-mensaje
-
+      -  KAN-1-feature-ms-GiovanniBahamondes-mensaje
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: 'ubuntu-latest'
 
     steps:
-      -name: Clonacion de codigo
-       uses: actions/checkout@v4
+      - name: Clonacion de codigo
+        uses: actions/checkout@v4
 
-      -name: Stepup Java JKD
-       uses: actions/setup-java@4.2.1
-       with:
-        java-version: '8'
-        distribution: 'temurin'
-        cache: maven
+      - name: Stepup Java JKD
+        uses: actions/setup-java@4.2.1
+        with:
+         java-version: '8'
+         distribution: 'temurin'
+         ache: maven
       
-      -name: Build with Maven
-       run: mvc -B package -.-file pom.xml
-        
+      - name: Build with Maven
+        run: mvc -B package -.-file pom.xml
