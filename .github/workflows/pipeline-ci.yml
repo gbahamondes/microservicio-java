@@ -22,3 +22,6 @@ jobs:
       
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+
+      - name: Pruebas Unitarias
+        run: mvn clean verify
