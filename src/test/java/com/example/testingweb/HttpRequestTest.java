@@ -23,5 +23,8 @@ public class HttpRequestTest {
 	public void greetingShouldReturnDefaultMessage() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
 				String.class)).contains("Hello, I'm Giovanni Bahamondes!!");
+
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/greeting",
+				String.class)).contains("Hello, I'm Giovanni Bahamondes!!");
 	}
 }
