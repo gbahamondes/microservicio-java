@@ -56,8 +56,8 @@ jobs:
 
       - name: Build
         run: |
-          docker build -t escapev/microservicio-java:latest .
+          docker build -t gbahamondes/microservicio-java:latest .
           
       - name: Push
         run: |
-          docker push escapev/microservicio-java:latest 
+          docker push gbahamondes/microservicio-java:latest 
