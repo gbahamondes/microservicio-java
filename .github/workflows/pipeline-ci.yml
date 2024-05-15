@@ -35,7 +35,7 @@ jobs:
       - name: Analisis de sonarCloud
         run: |
           mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.11.0.3922:sonar \
-          -Dsonar.token=gbahamondes-token \   
+          -Dsonar.token=gbahamondes-token-final \   
           -Dsonar.host.url=https://sonarcloud.io \ 
           -Dsonar.organization=gbahamondes \
           -Dsonar.projectKey=gbahamondes_microservicio-java 
