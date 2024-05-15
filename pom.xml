@@ -70,7 +70,7 @@
 			<minimum>0.7</minimum>
 			</limit>
 			</limits>
-			</rule>
+			</rule> 
 			</rules>
 			</configuration>
 			</execution>
