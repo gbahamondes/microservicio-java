@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-	 @GetMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
+	@RequestMapping("/")
 	public @ResponseBody String greeting() {
-		return "Hello, I'm Giovanni Bahamondes!!";
+		return "Hello, I'm Giovanni Bahamondes!!   ";
 	}
 
 }
