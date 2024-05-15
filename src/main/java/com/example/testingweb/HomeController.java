@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-	@RequestMapping(path = "/home", method = {RequestMethod.GET, RequestMethod.POST})
+	 @GetMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
 	public @ResponseBody String greeting() {
 		return "Hello, I'm Giovanni Bahamondes!!";
 	}
