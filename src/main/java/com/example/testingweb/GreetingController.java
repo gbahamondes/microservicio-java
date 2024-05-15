@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @Controller
 public class GreetingController {
 
@@ -14,7 +15,7 @@ public class GreetingController {
         this.service = service;
     }
 
-    @RequestMapping(value = "/greeting", produces = MediaType.TEXT_PLAIN_VALUE)
+    @RequestMapping(value = "/greeting", method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
     public @ResponseBody String greeting() {
         return service.greet();
     }
