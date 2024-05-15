@@ -56,8 +56,8 @@ jobs:
 
       - name: Build
         run: |
-          docker build -t gbahamondes/microservicio-java:latest .
+          docker build -t giosteel88/microservicio-java:latest .
           
       - name: Push
         run: |
-          docker push gbahamondes/microservicio-java:latest 
+          docker push giosteel88/microservicio-java:latest 
