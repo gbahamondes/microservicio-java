@@ -61,3 +61,19 @@ jobs:
       - name: Push
         run: |
           docker push giosteel88/microservicio-java:latest 
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Deploy on Kubernetes
+        run: |
+          kubectl apply -f deployment.yaml
+
+          
